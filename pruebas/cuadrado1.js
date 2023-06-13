@@ -14,10 +14,9 @@ this.g2 = random(255);
 this.b2 = random(255);
 //this.x2= width*10;
 //this.y2=height*6;
-
   }
 dibujar() {
-  this.m=random(2, 5);//en mi computadora se ve un poquito lento pero se podria cambiar por (5,8) 
+  this.m=random(10, 15);//en mi computadora se ve un poquito lento pero se podria cambiar por (5,8) 
 
   //noStroke();
   tint(this.r, this.g, this.b, 400);
@@ -30,7 +29,7 @@ dibujar() {
 }
 mover(){
 
-  if (this.x1>width) {
+  if (this.x1>width-(this.t1/4)) {
     this.x1=0;
     this.y1=random(height);
     //this.x2=width/5-(this.t1/4);

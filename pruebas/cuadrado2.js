@@ -29,7 +29,7 @@ class Caminante2 {
   }
   mover(){
   
-    if (this.y1>height) {
+    if (this.y1>height-(this.t1/2)) {
       this.y1=0;
       this.x1=random(height);
       //this.x2=width/5-(this.t1/4);
