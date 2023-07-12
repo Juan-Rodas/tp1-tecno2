@@ -25,9 +25,9 @@ class Fondo {
 
 dibujar() {
   //fondo
-  tint(this.r, this.g, this.b);
-  image(this.img, 0, 0);
-  tint(this.r2, this.g2, this.b2);
+  tint(this.r, this.g, this.b,300);
+  image(this.img, 0, 0,width,height);
+  tint(this.r2, this.g2, this.b2,300);
   image(this.img2, 0, 0);
 }
 

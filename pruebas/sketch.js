@@ -11,6 +11,8 @@ let mic;
 let amp;
 let haySonido = false;
 let antesHabiaSonido = false;
+let comienzo=false;
+let comienzo1=false;
 
 // cuadrado y fondo
 let cantidad;
@@ -29,10 +31,11 @@ for(let i=0; i<cantidad; i++){
 for(let i=0; i<cantidad; i++){
   cua2[i]= new Caminante2();
  }
+
 //fondo
   fon= new Fondo();
 
-createCanvas(windowWidth, windowHeight);
+createCanvas(1000, 700);
 
 //audio
 mic = new p5.AudioIn();
@@ -49,8 +52,17 @@ function draw(){
   let empezoElSonido = haySonido && !antesHabiaSonido; // EVENTO
 
   //cuadrados
+
   for(let i=0; i<cua1.length; i++){
+    if(!comienzo){
+    cua1[i].prueba();
+    cua2[i].prueba();
+    }
+  }
+  for(let i=0; i<cua1.length; i++){
+    
     if(empezoElSonido){
+
     cua1[i].dibujar();
     }
     if(haySonido){
@@ -58,7 +70,10 @@ function draw(){
     cua1[i].saltar();
     }
     cua1[i].dibujar();
+    comienzo=true;
+    
   }
+
 
   for(let i=0; i<cua2.length; i++){
     if(empezoElSonido){
@@ -69,6 +84,7 @@ function draw(){
     cua2[i].saltar();
     }
     cua2[i].dibujar();
+    //comienzo1=true;
   }
 
   //fondo
